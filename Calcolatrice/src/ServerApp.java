@@ -2,6 +2,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
+import utils.FileManager;
 
 public class ServerApp {
 
@@ -28,6 +29,8 @@ public class ServerApp {
             ObjectOutputStream out = new ObjectOutputStream(client.getOutputStream());
 
             out.writeObject(calculation);
+
+            
 
             client.close();
         }

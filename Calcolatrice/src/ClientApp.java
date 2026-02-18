@@ -4,7 +4,6 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class ClientApp {
-
     public static void main(String[] args) throws Exception {
 
         Socket socket = new Socket("localhost", 8080);
