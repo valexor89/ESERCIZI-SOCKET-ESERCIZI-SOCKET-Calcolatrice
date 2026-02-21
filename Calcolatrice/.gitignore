@@ -1,0 +1,8 @@
+﻿target/
+_backup-pre-maven-*/
+
+# VS Code Java legacy output
+bin/
+
+# Local logs
+*.log
