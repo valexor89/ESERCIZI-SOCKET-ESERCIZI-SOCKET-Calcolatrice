@@ -2,20 +2,19 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
-import utils.FileManager;
 
 public class ServerApp {
 
     public static void main(String[] args) throws Exception {
         System.out.println("Server started...");
 
-        ServerSocket socket = new ServerSocket(8080);
-
         Socket client = new Socket();
 
         CalculationDTO calculation = new CalculationDTO();
 
         while (true) {
+            ServerSocket socket = new ServerSocket(8080);
+
             client = socket.accept();
             // input stream di ricezione dei dati dal client
             ObjectInputStream in = new ObjectInputStream(client.getInputStream());
@@ -30,9 +29,8 @@ public class ServerApp {
 
             out.writeObject(calculation);
 
-            
-
             client.close();
+            socket.close();
         }
 
     }

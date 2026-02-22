@@ -17,6 +17,8 @@ import java.io.Serializable;
 
 public class CalculationDTO implements Serializable {
 
+    private static final long serialVersionUID = 1L;
+
     private Character operazione;
 
     private Double operando1;
